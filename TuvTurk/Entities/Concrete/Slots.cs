@@ -7,9 +7,13 @@ namespace TuvTurk.Entities.Concrete
     public class Slots : EntityBaseModel, IEntity
     {
         public long SlotId { get; set; }
-        public string StationId { get; set; }
+        public string City { get; set; }
         public int LineId { get; set; }
+        public DateOnly Date { get; set; }
         public int AppointmentSlot { get; set; }
+
+        [ForeignKey("Appointments")]
+        public Appointments? AppointmentId { get; set; }
     }
 }
 

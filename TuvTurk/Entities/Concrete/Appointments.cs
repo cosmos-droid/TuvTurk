@@ -14,11 +14,6 @@ namespace TuvTurk.Entities.Concrete
         public string VehicleType { get; set; }
         public string InspectionType { get; set; }
 
-        [ForeignKey("Slots")]
-        public Slots? Slot { get; set; }
-
-
-
     }
 }
 

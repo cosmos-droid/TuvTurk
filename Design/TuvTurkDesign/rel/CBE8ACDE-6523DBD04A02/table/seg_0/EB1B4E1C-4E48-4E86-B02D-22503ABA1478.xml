@@ -65,6 +65,18 @@
 <ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="ReservationNo" id="EF734248-60D6-44AD-C7A7-2204E18F85F0">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-18 18:05:10 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>99 CHAR</dataTypeSize>
+<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="VehicleType" id="14E0A058-8ADE-8090-9CC4-8A00A847F0FF">
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-17 11:14:11 UTC</createdTime>
@@ -97,9 +109,6 @@
 <logicalDatatype>LOGDT027</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="AB2E38B9-0F01-7C72-B413-5AC310D20C34" referredColumn="4FD98FB3-2980-D5CA-4706-5D1B84A8C733"/>
-</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -132,16 +141,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="294CD0C0-9B35-DB84-B550-C7EBD55C44F3"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="B8E7D3D5-346C-21B8-6D7C-5000FAEA430D" name="Appointments_Slots_FK">
-<createdBy>cosmos</createdBy>
-<createdTime>2025-12-17 12:20:26 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="60582405-3E9B-DEC6-FF9B-B05845A568B4"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
