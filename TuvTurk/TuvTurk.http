@@ -1,0 +1,6 @@
+@TuvTurk_HostAddress = http://localhost:5194
+
+GET {{TuvTurk_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
