@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="CBE8ACDE-C64F-644A-BF0E-6523DBD04A02" mainViewID="6E289340-2E13-A1D6-0811-022CF7992C1B">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 10:53:22 UTC</createdTime>
+<ownerDesignName>TüvTürk</ownerDesignName>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

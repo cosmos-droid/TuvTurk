@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5D3BF3DC-D1C0-AA4A-D64B-EEB157AB6864" name="Slots">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:15:57 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SlotId" id="4FD98FB3-2980-D5CA-4706-5D1B84A8C733">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:16:27 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="StatitonId" id="DFE453F0-C0CF-5D84-DB73-AB6CE9607D30">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:16:58 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>99 CHAR</dataTypeSize>
+<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LineId" id="55C162B6-636B-0D5E-4B14-3CA827BE38D2">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:17:59 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AppointmentSlot" id="12C9CBCB-9F52-37C0-870E-6845DD65F9B8">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:19:28 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B9806393-90BC-337D-05C0-51F1EE0CDCBE" name="Slots_PK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:16:27 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FD98FB3-2980-D5CA-4706-5D1B84A8C733"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B9F9BA6-A4CD-EE7A-3F50-2FCBB7652551" name="Slots_StationId_UQ">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:17:19 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFE453F0-C0CF-5D84-DB73-AB6CE9607D30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

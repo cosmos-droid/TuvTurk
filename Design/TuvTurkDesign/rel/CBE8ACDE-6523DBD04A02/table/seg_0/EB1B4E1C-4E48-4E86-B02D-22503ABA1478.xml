@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB1B4E1C-4E48-4E86-B02D-22503ABA1478" name="Appointments">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 10:53:57 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AppointmentId" id="88ADA884-A1B6-4920-CADA-E616CD4AB9CC">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 10:56:23 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CustomerName" id="0354C2DA-FD6B-A979-31F7-137DFEC0B73E">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:03:03 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>99 CHAR</dataTypeSize>
+<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PlateNo" id="973CE640-1A89-809C-FC40-513FBDEF7001">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:06:00 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>9 CHAR</dataTypeSize>
+<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VehicleNumberSerialNo" id="294CD0C0-9B35-DB84-B550-C7EBD55C44F3">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:07:43 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="City" id="AF46247E-3EF0-A148-844A-60B13A4D1EE7">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:10:27 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>99 CHAR</dataTypeSize>
+<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VehicleType" id="14E0A058-8ADE-8090-9CC4-8A00A847F0FF">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:14:11 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>99 CHAR</dataTypeSize>
+<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="InspectionType" id="F3537305-FE0E-47FF-9466-778E2F363569">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:15:00 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>99 CHAR</dataTypeSize>
+<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SlotId" id="60582405-3E9B-DEC6-FF9B-B05845A568B4">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 12:20:03 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AB2E38B9-0F01-7C72-B413-5AC310D20C34" referredColumn="4FD98FB3-2980-D5CA-4706-5D1B84A8C733"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="131C77A0-5387-EF2F-7F7B-C83FF2D1CB9B" name="Appointments_PK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 10:56:23 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88ADA884-A1B6-4920-CADA-E616CD4AB9CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2042F617-A0CD-2068-24EC-CA70C35F43AA" name="Appointments_PlateNo_UQ">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:06:10 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="973CE640-1A89-809C-FC40-513FBDEF7001"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DAD45226-9573-7A09-E0D4-79B10BDE58E0" name="Appointments_VehicleLicenseSerialNo_UQ">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:08:59 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="294CD0C0-9B35-DB84-B550-C7EBD55C44F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B8E7D3D5-346C-21B8-6D7C-5000FAEA430D" name="Appointments_Slots_FK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 12:20:26 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="60582405-3E9B-DEC6-FF9B-B05845A568B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
