@@ -3,7 +3,7 @@ using TuvTurk.Entities.Concrete;
 
 namespace TuvTurk.DataAccess.Abstract
 {
-    public interface ISlotRepository : IEntityRepository<Slots>
+    public interface ISlotDal : IEntityRepository<Slots>
     {
     }
 }
