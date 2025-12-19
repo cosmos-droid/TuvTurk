@@ -60,7 +60,7 @@ namespace TuvTurk.Business.Concrete
         {
             try
             {
-                return new SuccessDataResult<Appointments>(_appointmentDal.Get(q => q.AppointsmentsID == AppointmentId));
+                return new SuccessDataResult<Appointments>(_appointmentDal.Get(q => q.AppointsmentID == AppointmentId));
             }
             catch (Exception ex)
             {

@@ -1,6 +1,22 @@
+
+
+using Microsoft.EntityFrameworkCore;
+using TuvTurk.Business.Abstract;
+using TuvTurk.Business.Concrete;
+using TuvTurk.DataAccess.Abstract;
+using TuvTurk.DataAccess.Concrete.EntityFramework.Concrete;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+builder.Services.AddDbContext<TuvTurkDatabaseContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TuvTurkDatabaseContext")));
+
+builder.Services.AddScoped<IAppointmentDal, EfAppointmentRepository>();
+builder.Services.AddScoped<ISlotDal, EfSlotRepository>();
+
+builder.Services.AddScoped<IAppointmentService, AppointmentManager>();
+builder.Services.AddScoped<ISlotService, SlotManager>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -16,7 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using TuvTurk.Entities.Core;
 
@@ -6,7 +7,9 @@ namespace TuvTurk.Entities.Concrete
     [Table("Appointments")]
     public class Appointments : EntityBaseModel, IEntity
     {
-        public long AppointsmentsID { get; set; }
+        [Key]
+        public long AppointmentID { get; set; }
+
         public string? CustomerName { get; set; }
         public string PlateNo { get; set; }
         public string VehicleNumberSerialNo { get; set; }

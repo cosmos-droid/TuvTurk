@@ -7,8 +7,8 @@ namespace TuvTurk.DataAccess.Concrete.EntityFramework.Concrete
 {
     public class EfAppointmentRepository : EfRepositoryBase<Appointments, TuvTurkDatabaseContext>, IAppointmentDal
     {
-
-
-
+        public EfAppointmentRepository(TuvTurkDatabaseContext context) : base(context)
+        {
+        }
     }
 }

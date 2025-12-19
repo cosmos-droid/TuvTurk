@@ -27,7 +27,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>99 CHAR</dataTypeSize>
 <ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -38,9 +38,9 @@
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>9 CHAR</dataTypeSize>
-<ownDataTypeParameters>9 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>99 CHAR</dataTypeSize>
+<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="VehicleNumberSerialNo" id="294CD0C0-9B35-DB84-B550-C7EBD55C44F3">
@@ -60,7 +60,7 @@
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>99 CHAR</dataTypeSize>
 <ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -72,7 +72,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>99 CHAR</dataTypeSize>
 <ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -83,7 +83,7 @@
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>99 CHAR</dataTypeSize>
 <ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
@@ -94,20 +94,9 @@
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>99 CHAR</dataTypeSize>
 <ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="SlotId" id="60582405-3E9B-DEC6-FF9B-B05845A568B4">
-<createdBy>cosmos</createdBy>
-<createdTime>2025-12-17 12:20:03 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT027</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
@@ -133,7 +122,7 @@
 <colUsage columnID="973CE640-1A89-809C-FC40-513FBDEF7001"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="DAD45226-9573-7A09-E0D4-79B10BDE58E0" name="Appointments_VehicleLicenseSerialNo_UQ">
+<ind_PK_UK id="DAD45226-9573-7A09-E0D4-79B10BDE58E0" name="Appointments_LicenseNo_UQ">
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-17 11:08:59 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
@@ -141,6 +130,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="294CD0C0-9B35-DB84-B550-C7EBD55C44F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A71082CF-02D4-1015-5B0F-5F510830830E" name="Appointments_ReservationNo_UQ">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-19 18:13:58 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EF734248-60D6-44AD-C7A7-2204E18F85F0"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

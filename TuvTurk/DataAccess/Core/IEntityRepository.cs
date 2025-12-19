@@ -3,7 +3,7 @@ using TuvTurk.Entities.Core;
 
 namespace TuvTurk.DataAccess.Core
 {
-    public interface IEntityRepository<T> where T : class, IEntity, new()
+    public interface IEntityRepository<T> where T : class, IEntity
     {
         T Get(Expression<Func<T, bool>> filter);
         IList<T> GetAll(Expression<Func<T, bool>>? filter = null);

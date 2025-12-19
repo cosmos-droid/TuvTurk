@@ -6,5 +6,8 @@ namespace TuvTurk.DataAccess.Concrete.EntityFramework.Concrete
 {
     public class EfSlotRepository : EfRepositoryBase<Slots, TuvTurkDatabaseContext>, ISlotDal
     {
+        public EfSlotRepository(TuvTurkDatabaseContext context) : base(context)
+        {
+        }
     }
 }
