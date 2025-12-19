@@ -9,13 +9,14 @@ namespace TuvTurk.Entities.Concrete
     {
         [Key]
         public long SlotId { get; set; }
+        public long AppointmentId { get; set; }
         public string City { get; set; }
         public int LineId { get; set; }
-        public DateOnly Date { get; set; }
+        public DateOnly AvaibleDate { get; set; }
         public int AppointmentSlot { get; set; }
 
-        [ForeignKey("Appointments")]
-        public Appointments? AppointmentId { get; set; }
+        [ForeignKey("AppointmentId")]
+        public Appointments? Appointment { get; set; }
     }
 }
 

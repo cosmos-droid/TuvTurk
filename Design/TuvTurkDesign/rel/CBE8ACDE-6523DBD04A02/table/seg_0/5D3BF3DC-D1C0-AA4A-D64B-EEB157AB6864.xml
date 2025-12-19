@@ -76,6 +76,27 @@
 <colAssociation fkAssociation="55E782C6-13D4-702B-B797-9C43689094DC" referredColumn="88ADA884-A1B6-4920-CADA-E616CD4AB9CC"/>
 </associations>
 </Column>
+<Column name="CreatedDate" id="F6AD296F-730C-CEDA-1E94-FDE7FD1A6162">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-19 22:52:52 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UpdatedDate" id="9CEF8E96-792A-2125-8A7C-D894CD9CBD18">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-19 22:57:54 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="B9806393-90BC-337D-05C0-51F1EE0CDCBE" name="Slots_PK">

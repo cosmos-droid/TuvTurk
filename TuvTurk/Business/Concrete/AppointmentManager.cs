@@ -21,6 +21,7 @@ namespace TuvTurk.Business.Concrete
         {
             try
             {
+                appointment.ReservationNo = "RV" + DateTime.Now.Ticks.ToString();
                 _appointmentDal.Add(appointment);
                 return new SuccessResult(message: Messages.AppointmentAdded);
             }
@@ -60,7 +61,7 @@ namespace TuvTurk.Business.Concrete
         {
             try
             {
-                return new SuccessDataResult<Appointments>(_appointmentDal.Get(q => q.AppointsmentID == AppointmentId));
+                return new SuccessDataResult<Appointments>(_appointmentDal.Get(q => q.AppointmentID == AppointmentId));
             }
             catch (Exception ex)
             {

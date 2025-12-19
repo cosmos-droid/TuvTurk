@@ -99,6 +99,27 @@
 <ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="CreatedDate" id="6DCDB044-4E24-EFD7-CDB1-C68C3306B9BF">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-19 22:47:40 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UpdatedDate" id="42974516-50F8-A346-01BA-E8315067BA57">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-19 22:57:33 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="131C77A0-5387-EF2F-7F7B-C83FF2D1CB9B" name="Appointments_PK">

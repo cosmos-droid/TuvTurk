@@ -13,6 +13,8 @@ namespace TuvTurk.Entities.Concrete
         public string? CustomerName { get; set; }
         public string PlateNo { get; set; }
         public string VehicleNumberSerialNo { get; set; }
+
+        public string ReservationNo { get; set; }
         public string City { get; set; }
         public string VehicleType { get; set; }
         public string InspectionType { get; set; }
