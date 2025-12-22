@@ -81,5 +81,16 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
+        public IDataResult<IList<Slots>> GetEmptySlots()
+        {
+            try
+            {
+                return new SuccessDataResult<IList<Slots>>(_slotDal.GetAll(q => q.AppointmentId == null));
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<IList<Slots>>(message: ex.Message);
+            }
+        }
     }
 }

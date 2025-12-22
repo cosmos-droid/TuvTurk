@@ -8,6 +8,7 @@ namespace TuvTurk.Business.Abstract
     {
         IDataResult<Slots> GetSlotById(long SlotId);
         IDataResult<IList<Slots>> GetAllSlots();
+        IDataResult<IList<Slots>> GetEmptySlots();
 
         IResult AddSlot(Slots slot);
         IResult UpdateSlot(Slots slot);
