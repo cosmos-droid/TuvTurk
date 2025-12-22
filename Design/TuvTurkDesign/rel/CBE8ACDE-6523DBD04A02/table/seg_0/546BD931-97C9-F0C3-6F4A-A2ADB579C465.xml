@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="546BD931-97C9-F0C3-6F4A-A2ADB579C465" name="Cities">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:32:44 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CityId" id="947B1EE7-C249-4558-DFB0-22C73FEA345C">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:33:14 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CityName" id="5D281741-52AC-94CD-D09D-76CFA0778FB2">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:34:18 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CreatedDate" id="806D4465-B7C9-83F3-371E-CAB8F0FFA4F5">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:49:19 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UpdatedDate" id="86040030-CC26-CC2B-CCE3-85A11B422E73">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:51:45 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B2793294-023D-4F69-61DE-B720A5C7D7C4" name="Cities_PK">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:33:14 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="947B1EE7-C249-4558-DFB0-22C73FEA345C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CED979C2-A71A-8A01-542F-3A9FC0BAA414" name="Cities_Name_UQ">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:36:03 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D281741-52AC-94CD-D09D-76CFA0778FB2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

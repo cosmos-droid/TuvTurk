@@ -20,49 +20,6 @@
 <identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="City" id="DFE453F0-C0CF-5D84-DB73-AB6CE9607D30">
-<createdBy>cosmos</createdBy>
-<createdTime>2025-12-17 11:16:58 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<dataTypeSize>99 CHAR</dataTypeSize>
-<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="LineId" id="55C162B6-636B-0D5E-4B14-3CA827BE38D2">
-<createdBy>cosmos</createdBy>
-<createdTime>2025-12-17 11:17:59 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="Date" id="5C96D4C8-7C0B-9D45-AB7A-4DA3C406A42B">
-<createdBy>cosmos</createdBy>
-<createdTime>2025-12-18 18:02:22 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="AppointmentSlot" id="12C9CBCB-9F52-37C0-870E-6845DD65F9B8">
-<createdBy>cosmos</createdBy>
-<createdTime>2025-12-17 11:19:28 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT027</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="AppointmentId" id="42BC054C-CE31-CD75-76E4-D684F511569F">
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-18 18:15:54 UTC</createdTime>
@@ -75,6 +32,26 @@
 <associations>
 <colAssociation fkAssociation="55E782C6-13D4-702B-B797-9C43689094DC" referredColumn="88ADA884-A1B6-4920-CADA-E616CD4AB9CC"/>
 </associations>
+</Column>
+<Column name="Date" id="5C96D4C8-7C0B-9D45-AB7A-4DA3C406A42B">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-18 18:02:22 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AppointmentSlot" id="12C9CBCB-9F52-37C0-870E-6845DD65F9B8">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:19:28 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="CreatedDate" id="F6AD296F-730C-CEDA-1E94-FDE7FD1A6162">
 <createdBy>cosmos</createdBy>
@@ -117,8 +94,6 @@
 <indexState>Unique Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="DFE453F0-C0CF-5D84-DB73-AB6CE9607D30"/>
-<colUsage columnID="55C162B6-636B-0D5E-4B14-3CA827BE38D2"/>
 <colUsage columnID="5C96D4C8-7C0B-9D45-AB7A-4DA3C406A42B"/>
 <colUsage columnID="12C9CBCB-9F52-37C0-870E-6845DD65F9B8"/>
 </indexColumnUsage>

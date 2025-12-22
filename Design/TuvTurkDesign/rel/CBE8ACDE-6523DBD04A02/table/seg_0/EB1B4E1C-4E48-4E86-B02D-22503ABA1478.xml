@@ -3,7 +3,6 @@
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-17 10:53:57 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
-<ordsAlias>table_2</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
@@ -20,17 +19,42 @@
 <identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CustomerName" id="0354C2DA-FD6B-A979-31F7-137DFEC0B73E">
+<Column name="CustomerId" id="0354C2DA-FD6B-A979-31F7-137DFEC0B73E">
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-17 11:03:03 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<dataTypeSize>99 CHAR</dataTypeSize>
-<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CityId" id="AF46247E-3EF0-A148-844A-60B13A4D1EE7">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:10:27 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B1E32323-103E-566F-2961-A360D4B1E5FD" referredColumn="947B1EE7-C249-4558-DFB0-22C73FEA345C"/>
+</associations>
+</Column>
+<Column name="StationId" id="C62B9A14-3EF7-59E5-5D54-38C951D1A795">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:45:45 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C5BC49D2-7D8B-FAC1-8037-96E2CB66B784" referredColumn="EFA8E12D-2AB2-F2D4-C07B-C782ACF48B33"/>
+</associations>
 </Column>
 <Column name="PlateNo" id="973CE640-1A89-809C-FC40-513FBDEF7001">
 <createdBy>cosmos</createdBy>
@@ -52,17 +76,6 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>8 CHAR</dataTypeSize>
 <ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="City" id="AF46247E-3EF0-A148-844A-60B13A4D1EE7">
-<createdBy>cosmos</createdBy>
-<createdTime>2025-12-17 11:10:27 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<dataTypeSize>99 CHAR</dataTypeSize>
-<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="ReservationNo" id="EF734248-60D6-44AD-C7A7-2204E18F85F0">
@@ -161,6 +174,26 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="EF734248-60D6-44AD-C7A7-2204E18F85F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C84B901B-4178-77FD-9F02-7A4DC59E7DD5" name="Appointments_CityId_FK">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:46:46 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AF46247E-3EF0-A148-844A-60B13A4D1EE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="83E11B71-E331-D55E-A16A-0D7B0D780951" name="Appointments_Stations_FK">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:47:25 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C62B9A14-3EF7-59E5-5D54-38C951D1A795"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

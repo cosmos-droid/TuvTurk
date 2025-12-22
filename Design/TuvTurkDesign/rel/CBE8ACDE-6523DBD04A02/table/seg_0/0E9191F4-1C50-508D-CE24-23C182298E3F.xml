@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0E9191F4-1C50-508D-CE24-23C182298E3F" name="Stations">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:38:30 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="StationId" id="EFA8E12D-2AB2-F2D4-C07B-C782ACF48B33">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:38:51 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CityId" id="5533C764-D037-6BFA-9EB9-F738B8EBCF5E">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:39:53 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1D36CCBD-6355-5B0A-0860-E0C940AB1BB1" referredColumn="947B1EE7-C249-4558-DFB0-22C73FEA345C"/>
+</associations>
+</Column>
+<Column name="StationName" id="1441F90C-FA21-3E80-44BE-5E5CAB3B0F99">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:43:33 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="95CAB9B4-6755-D3F4-05B2-48CE4B47ABDB" name="Stations_PK">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:38:51 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EFA8E12D-2AB2-F2D4-C07B-C782ACF48B33"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B6457DC6-D26B-41D2-81CF-134891402C42" name="Stations_Cities_FK">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:44:34 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5533C764-D037-6BFA-9EB9-F738B8EBCF5E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

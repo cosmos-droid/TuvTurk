@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B1E32323-103E-566F-2961-A360D4B1E5FD" containerWithKeyObject="EB1B4E1C-4E48-4E86-B02D-22503ABA1478" localFKIndex="C84B901B-4178-77FD-9F02-7A4DC59E7DD5" name="Appointments_CityId_FK">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-22 12:46:46 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>546BD931-97C9-F0C3-6F4A-A2ADB579C465</referredTableID>
+<keyObject>B2793294-023D-4F69-61DE-B720A5C7D7C4</keyObject>
+<referredKeyID>B2793294-023D-4F69-61DE-B720A5C7D7C4</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
