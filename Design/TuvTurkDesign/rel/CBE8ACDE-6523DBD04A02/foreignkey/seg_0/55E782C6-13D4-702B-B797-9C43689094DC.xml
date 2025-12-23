@@ -8,7 +8,7 @@
 <referredTableID>EB1B4E1C-4E48-4E86-B02D-22503ABA1478</referredTableID>
 <keyObject>131C77A0-5387-EF2F-7F7B-C83FF2D1CB9B</keyObject>
 <referredKeyID>131C77A0-5387-EF2F-7F7B-C83FF2D1CB9B</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>AppointmentId</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>

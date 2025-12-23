@@ -23,12 +23,14 @@
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-17 11:03:03 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT027</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9CC0F00D-778A-4EA3-9D62-C13A5CF47B7E" referredColumn="A6BC25A2-C8C2-B5FC-2536-4E7C975FF5BA"/>
+</associations>
 </Column>
 <Column name="CityId" id="AF46247E-3EF0-A148-844A-60B13A4D1EE7">
 <createdBy>cosmos</createdBy>
@@ -56,6 +58,32 @@
 <colAssociation fkAssociation="C5BC49D2-7D8B-FAC1-8037-96E2CB66B784" referredColumn="EFA8E12D-2AB2-F2D4-C07B-C782ACF48B33"/>
 </associations>
 </Column>
+<Column name="VehicleTypeId" id="14E0A058-8ADE-8090-9CC4-8A00A847F0FF">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:14:11 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B01856D-7C9F-826C-030C-665672D4ABDE" referredColumn="3AD18FB9-DEDB-C4F4-33E4-1E143A4DD250"/>
+</associations>
+</Column>
+<Column name="InspectionTypeId" id="F3537305-FE0E-47FF-9466-778E2F363569">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-17 11:15:00 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3A2118AE-C8D6-9CCD-4A95-FCC46B3CFC9A" referredColumn="3AD18FB9-DEDB-C4F4-33E4-1E143A4DD250"/>
+</associations>
+</Column>
 <Column name="PlateNo" id="973CE640-1A89-809C-FC40-513FBDEF7001">
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-17 11:06:00 UTC</createdTime>
@@ -73,9 +101,9 @@
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>8 CHAR</dataTypeSize>
-<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="ReservationNo" id="EF734248-60D6-44AD-C7A7-2204E18F85F0">
@@ -83,28 +111,6 @@
 <createdTime>2025-12-18 18:05:10 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<dataTypeSize>99 CHAR</dataTypeSize>
-<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="VehicleType" id="14E0A058-8ADE-8090-9CC4-8A00A847F0FF">
-<createdBy>cosmos</createdBy>
-<createdTime>2025-12-17 11:14:11 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT037</logicalDatatype>
-<dataTypeSize>99 CHAR</dataTypeSize>
-<ownDataTypeParameters>99 CHAR,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="InspectionType" id="F3537305-FE0E-47FF-9466-778E2F363569">
-<createdBy>cosmos</createdBy>
-<createdTime>2025-12-17 11:15:00 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
@@ -194,6 +200,36 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="C62B9A14-3EF7-59E5-5D54-38C951D1A795"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0374F0EF-B0DB-F7EA-9E10-4174F420F154" name="Appointments_VehicleType_FK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:39:35 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14E0A058-8ADE-8090-9CC4-8A00A847F0FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AD6EAB4B-A1A0-A295-7630-8998E2DE48A4" name="Appointments_EnumGroupType_FK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:40:03 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3537305-FE0E-47FF-9466-778E2F363569"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7CF3C551-BDAB-44E8-AD30-945484757BF5" name="Appointments_Customers_FK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 16:20:16 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0354C2DA-FD6B-A979-31F7-137DFEC0B73E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

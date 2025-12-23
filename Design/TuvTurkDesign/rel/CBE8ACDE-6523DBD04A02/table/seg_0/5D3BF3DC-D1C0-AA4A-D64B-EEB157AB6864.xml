@@ -24,6 +24,7 @@
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-18 18:15:54 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT027</logicalDatatype>
@@ -33,7 +34,7 @@
 <colAssociation fkAssociation="55E782C6-13D4-702B-B797-9C43689094DC" referredColumn="88ADA884-A1B6-4920-CADA-E616CD4AB9CC"/>
 </associations>
 </Column>
-<Column name="Date" id="5C96D4C8-7C0B-9D45-AB7A-4DA3C406A42B">
+<Column name="AvaibleDate" id="5C96D4C8-7C0B-9D45-AB7A-4DA3C406A42B">
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-18 18:02:22 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
@@ -60,6 +61,7 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>GETDATE()</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>

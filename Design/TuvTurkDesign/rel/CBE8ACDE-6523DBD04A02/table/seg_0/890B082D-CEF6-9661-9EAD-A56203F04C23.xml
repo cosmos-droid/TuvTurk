@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0E9191F4-1C50-508D-CE24-23C182298E3F" name="Stations">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:38:30 UTC</createdTime>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="890B082D-CEF6-9661-9EAD-A56203F04C23" name="Customers">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 16:17:40 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
-<ordsAlias>table_5</ordsAlias>
+<ordsAlias>table_8</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="StationId" id="EFA8E12D-2AB2-F2D4-C07B-C782ACF48B33">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:38:51 UTC</createdTime>
+<Column name="CustomerId" id="A6BC25A2-C8C2-B5FC-2536-4E7C975FF5BA">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 16:17:52 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -18,25 +18,11 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementColumn>true</autoIncrementColumn>
 <identityColumn>true</identityColumn>
-<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CityId" id="5533C764-D037-6BFA-9EB9-F738B8EBCF5E">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:39:53 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT027</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="1D36CCBD-6355-5B0A-0860-E0C940AB1BB1" referredColumn="947B1EE7-C249-4558-DFB0-22C73FEA345C"/>
-</associations>
-</Column>
-<Column name="StationName" id="1441F90C-FA21-3E80-44BE-5E5CAB3B0F99">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:43:33 UTC</createdTime>
+<Column name="CustomerName" id="1F983E49-4CFC-EC12-B57D-D40FD23C1607">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 16:18:25 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -45,9 +31,31 @@
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CreatedDate" id="30A1A758-E8A0-DB46-E30C-FC1C1C25302F">
+<Column name="CustomerLastName" id="CCDC18B1-8271-9899-B0F9-593033DD9219">
 <createdBy>cosmos</createdBy>
-<createdTime>2025-12-23 15:32:07 UTC</createdTime>
+<createdTime>2025-12-23 16:18:43 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CustomerPhoneNumber" id="1D9485F2-852F-EA93-E933-9E245F01DD5A">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 16:25:42 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CreatedDate" id="4F23F66C-0D46-1A59-3004-5B3DB56A6334">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 16:19:02 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -56,9 +64,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="UpdatedDate" id="96B66154-AD8A-3AE4-6829-AAD7AEAE45C6">
+<Column name="UpdatedDate" id="78CD5A50-DB2B-8D29-5433-B70B22EB8F3F">
 <createdBy>cosmos</createdBy>
-<createdTime>2025-12-23 15:32:35 UTC</createdTime>
+<createdTime>2025-12-23 16:19:27 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -69,25 +77,15 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="95CAB9B4-6755-D3F4-05B2-48CE4B47ABDB" name="Stations_PK">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:38:51 UTC</createdTime>
+<ind_PK_UK id="EC438F9E-1F11-E159-ED33-AB244DF95339" name="Customers_PK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 16:17:52 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="EFA8E12D-2AB2-F2D4-C07B-C782ACF48B33"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="B6457DC6-D26B-41D2-81CF-134891402C42" name="Stations_Cities_FK">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:44:34 UTC</createdTime>
-<ownerDesignName>TuvTurkDesign</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="5533C764-D037-6BFA-9EB9-F738B8EBCF5E"/>
+<colUsage columnID="A6BC25A2-C8C2-B5FC-2536-4E7C975FF5BA"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

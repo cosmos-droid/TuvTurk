@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A793C123-DC13-210A-68AF-F2446EF658F3" containerWithKeyObject="939F3ED9-D760-3D55-BC1C-AA6ACC1EBA0C" localFKIndex="385E53FD-0412-4A5A-DD34-68B32EE4758A" name="EnumGroupType_EnumGroup_FK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:36:58 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<referredTableLongName>EnumGroups</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F60BAAC6-8492-8C29-4CD0-00FB763DC23F</referredTableID>
+<keyObject>C3792581-D7D1-1B5A-2C78-00574D4C6FE2</keyObject>
+<referredKeyID>C3792581-D7D1-1B5A-2C78-00574D4C6FE2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>EnumGroupId</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
