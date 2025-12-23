@@ -9,15 +9,27 @@ namespace TuvTurk.Entities.Concrete
     {
         [Key]
         public long AppointmentID { get; set; }
+        public long CustomerId { get; set; }
+        public long CityId { get; set; }
+        public long StationId { get; set; }
+        public long VehicleTypeId { get; set; }
+        public long InspectionTypeId { get; set; }
 
-        public string? CustomerName { get; set; }
         public string PlateNo { get; set; }
         public string VehicleNumberSerialNo { get; set; }
 
         public string ReservationNo { get; set; }
-        public string City { get; set; }
-        public string VehicleType { get; set; }
-        public string InspectionType { get; set; }
+
+        [ForeignKey("CustomerId")]
+        public Customer Customer { get; set; }
+        [ForeignKey("CityId")]
+        public City City { get; set; }
+        [ForeignKey("StationId")]
+        public Station Station { get; set; }
+        [ForeignKey("VehicleTypeId")]
+        public EnumGroupType VehicleType { get; set; }
+        [ForeignKey("InspectionTypeId")]
+        public EnumGroupType InspectionType { get; set; }
 
     }
 }
