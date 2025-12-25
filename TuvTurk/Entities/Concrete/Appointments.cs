@@ -21,15 +21,19 @@ namespace TuvTurk.Entities.Concrete
         public string ReservationNo { get; set; }
 
         [ForeignKey("CustomerId")]
-        public Customer Customer { get; set; }
+        public Customer? Customer { get; set; }
+
         [ForeignKey("CityId")]
-        public City City { get; set; }
+        public City? City { get; set; }
+
         [ForeignKey("StationId")]
-        public Station Station { get; set; }
+        public Station? Station { get; set; }
+
         [ForeignKey("VehicleTypeId")]
-        public EnumGroupType VehicleType { get; set; }
+        public EnumGroupType? VehicleType { get; set; }
+
         [ForeignKey("InspectionTypeId")]
-        public EnumGroupType InspectionType { get; set; }
+        public EnumGroupType? InspectionType { get; set; }
 
     }
 }

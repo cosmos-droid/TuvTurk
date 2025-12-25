@@ -13,7 +13,7 @@ namespace TuvTurk.Entities.Concrete
         public string? StationName { get; set; }
 
         [ForeignKey("CityId")]
-        public City City { get; set; }
+        public City? City { get; set; }
 
     }
 }

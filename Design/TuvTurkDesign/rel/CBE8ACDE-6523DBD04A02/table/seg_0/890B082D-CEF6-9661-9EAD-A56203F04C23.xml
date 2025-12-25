@@ -62,6 +62,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <defaultValue>GETDATE()</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<defaultOntNull>true</defaultOntNull>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="UpdatedDate" id="78CD5A50-DB2B-8D29-5433-B70B22EB8F3F">
