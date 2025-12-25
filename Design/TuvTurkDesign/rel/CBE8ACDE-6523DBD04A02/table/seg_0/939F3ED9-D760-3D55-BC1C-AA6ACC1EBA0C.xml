@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0E9191F4-1C50-508D-CE24-23C182298E3F" name="Stations">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:38:30 UTC</createdTime>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="939F3ED9-D760-3D55-BC1C-AA6ACC1EBA0C" name="EnumGroupsTypes">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:32:57 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
-<ordsAlias>table_5</ordsAlias>
+<ordsAlias>table_7</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="StationId" id="EFA8E12D-2AB2-F2D4-C07B-C782ACF48B33">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:38:51 UTC</createdTime>
+<Column name="EnumGroupTypeId" id="3AD18FB9-DEDB-C4F4-33E4-1E143A4DD250">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:33:40 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -18,12 +18,11 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementColumn>true</autoIncrementColumn>
 <identityColumn>true</identityColumn>
-<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CityId" id="5533C764-D037-6BFA-9EB9-F738B8EBCF5E">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:39:53 UTC</createdTime>
+<Column name="EnumGroupId" id="4E37E103-AAD0-3D83-6A2C-D24E6B23AE6B">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:35:32 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -31,12 +30,12 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="1D36CCBD-6355-5B0A-0860-E0C940AB1BB1" referredColumn="947B1EE7-C249-4558-DFB0-22C73FEA345C"/>
+<colAssociation fkAssociation="A793C123-DC13-210A-68AF-F2446EF658F3" referredColumn="BDD7DC2D-1324-B82B-1D3A-98AB8918C568"/>
 </associations>
 </Column>
-<Column name="StationName" id="1441F90C-FA21-3E80-44BE-5E5CAB3B0F99">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:43:33 UTC</createdTime>
+<Column name="EnumGroupTypeName" id="CD7EAF66-F3D8-5989-8191-68C6C3E6B918">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:34:07 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -45,9 +44,18 @@
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CreatedDate" id="30A1A758-E8A0-DB46-E30C-FC1C1C25302F">
+<Column name="EnumGroupTypeDescription" id="54FA90E8-9208-5940-4874-0FB0D0265FD4">
 <createdBy>cosmos</createdBy>
-<createdTime>2025-12-23 15:32:07 UTC</createdTime>
+<createdTime>2025-12-23 15:34:41 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CreatedDate" id="F8FB8D82-E0AF-F447-8493-10FA03982518">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:34:51 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -56,9 +64,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="UpdatedDate" id="96B66154-AD8A-3AE4-6829-AAD7AEAE45C6">
+<Column name="UpdatedDate" id="E055B011-FEC9-DBD4-7C1E-F950F3D95886">
 <createdBy>cosmos</createdBy>
-<createdTime>2025-12-23 15:32:35 UTC</createdTime>
+<createdTime>2025-12-23 15:35:11 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -69,25 +77,25 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="95CAB9B4-6755-D3F4-05B2-48CE4B47ABDB" name="Stations_PK">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:38:51 UTC</createdTime>
+<ind_PK_UK id="EE84C926-25E4-4C03-1A47-46110CB180DB" name="EnumGroupType_PK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:33:40 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="EFA8E12D-2AB2-F2D4-C07B-C782ACF48B33"/>
+<colUsage columnID="3AD18FB9-DEDB-C4F4-33E4-1E143A4DD250"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="B6457DC6-D26B-41D2-81CF-134891402C42" name="Stations_Cities_FK">
-<createdBy>kutay</createdBy>
-<createdTime>2025-12-22 12:44:34 UTC</createdTime>
+<ind_PK_UK id="385E53FD-0412-4A5A-DD34-68B32EE4758A" name="EnumGroupType_EnumGroup_FK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-23 15:36:58 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="5533C764-D037-6BFA-9EB9-F738B8EBCF5E"/>
+<colUsage columnID="4E37E103-AAD0-3D83-6A2C-D24E6B23AE6B"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
