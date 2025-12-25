@@ -53,6 +53,18 @@
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="CustomerEMail" id="90DB0EC7-EE94-F1CF-F5C4-DD99D9CCCB7D">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-25 18:36:21 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="CreatedDate" id="4F23F66C-0D46-1A59-3004-5B3DB56A6334">
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-23 16:19:02 UTC</createdTime>
