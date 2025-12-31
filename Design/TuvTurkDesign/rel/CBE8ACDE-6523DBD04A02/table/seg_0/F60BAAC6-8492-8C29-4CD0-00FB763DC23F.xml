@@ -66,5 +66,15 @@
 <colUsage columnID="BDD7DC2D-1324-B82B-1D3A-98AB8918C568"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="A7FAA20A-B119-9964-2505-5E021DACD649" name="EnumGroups_ENUMNAME_UQ">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-26 07:25:31 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BE182B25-460A-9DB2-2852-EA14D3280D2C"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>

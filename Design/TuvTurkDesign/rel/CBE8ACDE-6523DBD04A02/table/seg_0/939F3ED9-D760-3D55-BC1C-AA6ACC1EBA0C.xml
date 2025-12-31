@@ -44,6 +44,17 @@
 <ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Code" id="8E8A38A8-8A5F-4340-98A3-5949AB475CE3">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-26 06:12:50 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="EnumGroupTypeDescription" id="54FA90E8-9208-5940-4874-0FB0D0265FD4">
 <createdBy>cosmos</createdBy>
 <createdTime>2025-12-23 15:34:41 UTC</createdTime>
@@ -89,6 +100,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="3AD18FB9-DEDB-C4F4-33E4-1E143A4DD250"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="59E6DC2B-738D-DF97-0EDA-0EDCDEB2AC77" name="EnumGroupsTypes_Code_UQ">
+<createdBy>kutay</createdBy>
+<createdTime>2025-12-26 07:26:25 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E8A38A8-8A5F-4340-98A3-5949AB475CE3"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="385E53FD-0412-4A5A-DD34-68B32EE4758A" name="EnumGroupType_EnumGroup_FK">

@@ -1,3 +1,4 @@
+using System.IO.Pipelines;
 using TuvTurk.Business.Abstract;
 using TuvTurk.Business.Constants;
 using TuvTurk.DataAccess.Abstract;
@@ -57,6 +58,8 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
+
+
         public IDataResult<Station> GetStationById(long StationId)
         {
             try
@@ -67,6 +70,21 @@ namespace TuvTurk.Business.Concrete
             {
                 return new ErrorDataResult<Station>(message: ex.Message);
             }
+        }
+
+
+
+        public IDataResult<IList<Station>> GetStationsByCityId(long cityId)
+        {
+            try
+            {
+                return new SuccessDataResult<IList<Station>>(_stationDal.GetAll().Where(q => q.CityId == cityId).ToList());
+            }
+            catch(Exception ex)
+            {
+                return new ErrorDataResult<IList<Station>>(message: ex.Message);
+            }
+         
         }
 
         public IResult UpdateStation(Station station)

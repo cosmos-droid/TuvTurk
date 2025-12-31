@@ -8,6 +8,7 @@ namespace TuvTurk.Business.Abstract
     public interface IStationService
     {
         IDataResult<Station> GetStationById(long StationId);
+        IDataResult<IList<Station>> GetStationsByCityId(long cityId);
         IDataResult<IList<Station>> GetAllStations();
 
         IResult AddStation(Station station);
