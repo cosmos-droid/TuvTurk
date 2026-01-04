@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="65332FA0-C537-24CD-A712-C5220ADAF072" containerWithKeyObject="5D3BF3DC-D1C0-AA4A-D64B-EEB157AB6864" localFKIndex="269B9802-93BB-3DEC-7E98-287A8677862C" name="Slots_Stations_FK">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-31 07:42:09 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<referredTableLongName>Stations</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>0E9191F4-1C50-508D-CE24-23C182298E3F</referredTableID>
+<keyObject>95CAB9B4-6755-D3F4-05B2-48CE4B47ABDB</keyObject>
+<referredKeyID>95CAB9B4-6755-D3F4-05B2-48CE4B47ABDB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>StationId</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

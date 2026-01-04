@@ -80,6 +80,17 @@
 <colUsage columnID="EFA8E12D-2AB2-F2D4-C07B-C782ACF48B33"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="D8EC6542-7D24-2087-4553-7D6BEA643548" name="Stations_StationName_UQ">
+<createdBy>cosmos</createdBy>
+<createdTime>2025-12-31 09:09:35 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5533C764-D037-6BFA-9EB9-F738B8EBCF5E"/>
+<colUsage columnID="1441F90C-FA21-3E80-44BE-5E5CAB3B0F99"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="B6457DC6-D26B-41D2-81CF-134891402C42" name="Stations_Cities_FK">
 <createdBy>kutay</createdBy>
 <createdTime>2025-12-22 12:44:34 UTC</createdTime>

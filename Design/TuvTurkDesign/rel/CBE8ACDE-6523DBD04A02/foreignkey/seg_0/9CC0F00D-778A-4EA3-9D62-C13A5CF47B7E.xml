@@ -8,7 +8,7 @@
 <referredTableID>890B082D-CEF6-9661-9EAD-A56203F04C23</referredTableID>
 <keyObject>EC438F9E-1F11-E159-ED33-AB244DF95339</keyObject>
 <referredKeyID>EC438F9E-1F11-E159-ED33-AB244DF95339</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>CustomerId</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
