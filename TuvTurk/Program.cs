@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<TuvTurkDatabaseContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("TuvTurkDatabaseContext")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CloudBeaverContext")));
 
 //Services and Dals
 builder.Services.AddScoped<IAppointmentDal, EfAppointmentRepository>();

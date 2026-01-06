@@ -4,7 +4,7 @@ using TuvTurk.Entities.Core;
 
 namespace TuvTurk.Entities.Concrete
 {
-    [Table("Cities")]
+    [Table("TURKAI.Cities")]
     public class City : EntityBaseModel, IEntity
     {
         [Key]
