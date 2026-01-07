@@ -71,5 +71,31 @@ namespace TuvTurk.Controllers
             return BadRequest(result.Message);
         }
 
+        [HttpGet(template: "getallempty")]
+        public IActionResult GetAllEmptySlots(long stationId)
+        {
+            var result = _slotsService.GetEmptySlots(stationId);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result.Message);
+        }
+
+        [HttpGet(template: "getallemptybydate")]
+        public IActionResult GetAllEmptySlotsByDate(DateOnly availableDate, long stationId)
+        {
+            var result = _slotsService.GetEmptySlotsByDate(availableDate, stationId);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result.Message);
+        }
+
+
+
+
+
     }
 }

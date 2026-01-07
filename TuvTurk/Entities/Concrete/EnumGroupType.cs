@@ -4,7 +4,7 @@ using TuvTurk.Entities.Core;
 
 namespace TuvTurk.Entities.Concrete
 {
-    [Table("EnumGroupsTypes")]
+    [Table("EnumGroupsTypes",Schema ="TURKAI")]
     public class EnumGroupType : EntityBaseModel, IEntity
     {
         [Key]

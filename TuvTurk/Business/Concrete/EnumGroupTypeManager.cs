@@ -54,6 +54,21 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
+
+        public IDataResult<IList<EnumGroupType>> GetEnumGroupTypeByEnumGroupId(long enumGroupId)
+        {
+            try
+            {
+                return new SuccessDataResult<IList<EnumGroupType>>(_enumGroupTypeDal.GetAll(q => q.EnumGroupId == enumGroupId));
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<IList<EnumGroupType>>(message: ex.Message);
+            }
+        }
+
+
+
         public IDataResult<EnumGroupType> GetEnumGroupTypeById(long EnumGroupTypeId)
         {
             try

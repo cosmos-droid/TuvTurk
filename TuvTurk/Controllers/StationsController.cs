@@ -73,5 +73,21 @@ namespace TuvTurk.Controllers
             return BadRequest(result.Message);
         }
 
+
+        [HttpGet(template: "getallbycityid")]
+        public IActionResult GetAllByCityId(long cityId)
+        {
+            var result = _stationService.GetStationsByCityId(cityId);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result.Message);
+        }
+
+
+
+
+
     }
 }

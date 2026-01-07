@@ -60,6 +60,8 @@ namespace TuvTurk.Controllers
             }
             return BadRequest(result.Message);
         }
+
+
         [HttpGet(template: "getall")]
         public IActionResult GetAll()
         {
@@ -70,6 +72,18 @@ namespace TuvTurk.Controllers
             }
             return BadRequest(result.Message);
         }
+
+        [HttpGet(template: "getallbyenumgroupid")]
+        public IActionResult GetAllByEnumGroupId(long enumGroupId)
+        {
+            var result = _enumGroupTypeService.GetEnumGroupTypeByEnumGroupId(enumGroupId);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result.Message);
+        }
+
 
     }
 }

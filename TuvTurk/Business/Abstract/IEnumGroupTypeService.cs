@@ -8,6 +8,10 @@ namespace TuvTurk.Business.Abstract
     public interface IEnumGroupTypeService
     {
         IDataResult<EnumGroupType> GetEnumGroupTypeById(long EnumGroupTypeId);
+
+        IDataResult<IList<EnumGroupType>> GetEnumGroupTypeByEnumGroupId(long enumGroupId);
+
+
         IDataResult<IList<EnumGroupType>> GetAllEnumGroupTypes();
 
         IResult AddEnumGroupType(EnumGroupType enumGroupType);

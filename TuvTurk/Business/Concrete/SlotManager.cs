@@ -81,16 +81,34 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
-        public IDataResult<IList<Slots>> GetEmptySlots()
+
+        //Endpoint for frontend widget
+        public IDataResult<IList<Slots>> GetEmptySlots(long stationId)
         {
             try
             {
-                return new SuccessDataResult<IList<Slots>>(_slotDal.GetAll(q => q.AppointmentId == null));
+                return new SuccessDataResult<IList<Slots>>(_slotDal.GetAll(q => q.AppointmentId == null && q.StationId == stationId));
             }
             catch (Exception ex)
             {
                 return new ErrorDataResult<IList<Slots>>(message: ex.Message);
             }
         }
+
+        public IDataResult<IList<Slots>> GetEmptySlotsByDate(DateOnly availableDate,long stationId)
+        {
+            try
+            {
+                return new SuccessDataResult<IList<Slots>>(_slotDal.GetAll(q => q.AvaibleDate == availableDate && q.AppointmentId == null && q.StationId == stationId));
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<IList<Slots>>(message: ex.Message);
+            }
+        }
+
+
+
+
     }
 }
