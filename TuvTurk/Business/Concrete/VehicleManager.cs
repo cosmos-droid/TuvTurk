@@ -106,7 +106,7 @@ namespace TuvTurk.Business.Concrete
         {
             try
             {
-               plateNo = RemoveSpace(plateNo);
+                plateNo = RemoveSpace(plateNo);
                 Vehicle tempVehicle = _vehicleDal.Get(q => q.PlateNo == plateNo);
                 return new SuccessDataResult<EnumGroupType>(_enumGroupTypeDal.Get(s => s.EnumGroupTypeId == tempVehicle.VehicleTypeId));
             }
