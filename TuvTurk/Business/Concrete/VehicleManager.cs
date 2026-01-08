@@ -88,7 +88,7 @@ namespace TuvTurk.Business.Concrete
 
         public IDataResult<bool> DoesPlateExist(string plateNo)
         {
-            RemoveSpace(plateNo);
+            plateNo = RemoveSpace(plateNo);
             Vehicle tempVehicle = _vehicleDal.Get(q => q.PlateNo == plateNo);
             return new SuccessDataResult<bool>(tempVehicle == null ? false : true);
             
@@ -97,7 +97,7 @@ namespace TuvTurk.Business.Concrete
 
         public IDataResult<bool> PlateRuhsatCheck(string plateNo, string vehicleSerialNumberNo)
         {
-            RemoveSpace(plateNo);
+            plateNo = RemoveSpace(plateNo);
             var tempVehicle = _vehicleDal.Get(s => s.PlateNo == plateNo);
             return new SuccessDataResult<bool>(tempVehicle.VehicleNumberSerialNo == vehicleSerialNumberNo ? true : false);
         }
@@ -106,7 +106,7 @@ namespace TuvTurk.Business.Concrete
         {
             try
             {
-                RemoveSpace(plateNo);
+               plateNo = RemoveSpace(plateNo);
                 Vehicle tempVehicle = _vehicleDal.Get(q => q.PlateNo == plateNo);
                 return new SuccessDataResult<EnumGroupType>(_enumGroupTypeDal.Get(s => s.EnumGroupTypeId == tempVehicle.VehicleTypeId));
             }
@@ -116,10 +116,9 @@ namespace TuvTurk.Business.Concrete
             }
        }
 
-        private void RemoveSpace(string text)
+        private string RemoveSpace(string text)
         {
-            text.ToUpper();
-            text.Replace(" ","");
+            return text.ToUpper().Replace(" ",string.Empty);   
         }
     }
 }
