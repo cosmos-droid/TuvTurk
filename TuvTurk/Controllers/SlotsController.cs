@@ -60,6 +60,27 @@ namespace TuvTurk.Controllers
             return BadRequest(result.Message);
         }
 
+
+        [HttpPost(template: "getandupdateslot")]
+        public IActionResult GetAndUpdateSlot(long appointmentId, long stationId, string availableDate, long appointmentSlot )
+        {
+
+            var date = DateOnly.Parse(availableDate);
+
+            var result = _slotsService.GetAndUpdateSlot(appointmentId, stationId, date, appointmentSlot);            
+            if (result.Success)
+            {
+                return Ok(result.Message);
+            }
+            return BadRequest(result.Message);
+        }
+
+
+
+
+
+
+
         [HttpGet(template: "getall")]
         public IActionResult GetAll()
         {
@@ -71,7 +92,7 @@ namespace TuvTurk.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpGet(template: "getallempty")]
+        [HttpGet(template: "getallemptyslots")]
         public IActionResult GetAllEmptySlots(long stationId)
         {
             var result = _slotsService.GetEmptySlots(stationId);
@@ -82,16 +103,26 @@ namespace TuvTurk.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpGet(template: "getallemptybydate")]
-        public IActionResult GetAllEmptySlotsByDate(DateOnly availableDate, long stationId)
+        [HttpGet(template: "getallemptyslotsbydate")]
+        public IActionResult GetAllEmptySlotsByDate(    
+            [FromQuery] string availableDateStart,
+            [FromQuery] string availableDateEnd,
+            [FromQuery] long stationId)
         {
-            var result = _slotsService.GetEmptySlotsByDate(availableDate, stationId);
+
+            var start = DateOnly.Parse(availableDateStart);
+            var end = DateOnly.Parse(availableDateEnd);
+
+
+            var result = _slotsService.GetEmptySlotsByDate(start,end, stationId);
             if (result.Success)
             {
                 return Ok(result.Data);
             }
             return BadRequest(result.Message);
         }
+
+
 
 
 

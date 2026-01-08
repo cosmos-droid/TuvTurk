@@ -9,7 +9,7 @@ namespace TuvTurk.Entities.Concrete
     {
         [Key]
         public long AppointmentID { get; set; }
-        public long CustomerId { get; set; }
+        public long? CustomerId { get; set; }
         public long CityId { get; set; }
         public long StationId { get; set; }
         public long VehicleTypeId { get; set; }

@@ -44,5 +44,12 @@ namespace TuvTurk.Business.Constants
         public static string CustomerDeleted = "Customer deleted successfully.";
         public static string CustomerUpdated = "Customer updated successfully.";
         public static string CustomerNotFound = "Customer not found.";
+
+        public static string VehicleAdded = "Vehicle added succesfully.";
+        public static string VehicleDeleted = "Vehicle updated succesfully.";
+        public static string VehicleUpdated = "Vehicle deleted succesfully.";
+        public static string VehicleNotFound = "Vehicle not found.";
+
+
     }
 }

@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AF564692-8A31-CFAD-A15F-C1B0CD5C52FF" containerWithKeyObject="FE042A92-C7B2-12FA-3CB2-186DB6AF9514" localFKIndex="150E8C30-0DF5-6563-03D9-E0EBCD79AA30" name="Vehicles_EnumGroupsTypes_FK">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:29:28 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>939F3ED9-D760-3D55-BC1C-AA6ACC1EBA0C</referredTableID>
+<keyObject>EE84C926-25E4-4C03-1A47-46110CB180DB</keyObject>
+<referredKeyID>EE84C926-25E4-4C03-1A47-46110CB180DB</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

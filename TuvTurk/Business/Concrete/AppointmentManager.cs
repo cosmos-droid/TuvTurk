@@ -21,7 +21,6 @@ namespace TuvTurk.Business.Concrete
         {
             try
             {
-                appointment.ReservationNo = "RV" + DateTime.Now.Ticks.ToString();
                 _appointmentDal.Add(appointment);
                 return new SuccessResult(message: Messages.AppointmentAdded);
             }
@@ -68,6 +67,19 @@ namespace TuvTurk.Business.Concrete
                 return new ErrorDataResult<Appointments>(message: ex.Message);
             }
         }
+
+        public IDataResult<Appointments> GetAppointmentByReservationNo(string reservationNo)
+        {
+            try
+            {
+                return new SuccessDataResult<Appointments>(_appointmentDal.Get(q => q.ReservationNo == reservationNo));
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<Appointments>(message: ex.Message);
+            }
+        }
+
 
         public IResult UpdateAppointment(Appointments appointment)
         {

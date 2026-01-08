@@ -8,6 +8,9 @@ namespace TuvTurk.Business.Abstract
     public interface IAppointmentService
     {
         IDataResult<Appointments> GetAppointmentById(long AppointmentId);
+       
+        IDataResult<Appointments> GetAppointmentByReservationNo(string reservationno);
+      
         IDataResult<IList<Appointments>> GetAllAppointments();
 
         IResult AddAppointment(Appointments appointment);

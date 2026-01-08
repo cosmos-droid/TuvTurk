@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FE042A92-C7B2-12FA-3CB2-186DB6AF9514" name="Vehicles">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:20:22 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VehicleId" id="7FF97084-167C-C6D1-F242-55E8E449BDFB">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:21:02 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PlateNo" id="341A8396-A1FB-6D9B-61BA-ED23832459E0">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:22:04 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VehicleTypeId" id="70B3BA94-676C-3639-B635-FE5D09F8481A">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:28:26 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF564692-8A31-CFAD-A15F-C1B0CD5C52FF" referredColumn="3AD18FB9-DEDB-C4F4-33E4-1E143A4DD250"/>
+</associations>
+</Column>
+<Column name="VehicleNumberSerialNo" id="B5771CC6-FFC4-737A-4C60-2B5F4545FF23">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:24:09 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CreatedDate" id="AA2683A3-0ED7-DF3C-F883-B1BF407BB35F">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:26:00 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>SYSDATETIME()</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UpdatedDate" id="DC4ACDCF-6B20-E723-4AB0-FB5C0170C7CE">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:28:03 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A6DBECEE-95D4-9C0A-A4C7-EC2DC5C37F29" name="Vehicles_PK">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:21:02 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FF97084-167C-C6D1-F242-55E8E449BDFB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="150E8C30-0DF5-6563-03D9-E0EBCD79AA30" name="Vehicles_EnumGroupsTypes_FK">
+<createdBy>kutay</createdBy>
+<createdTime>2026-01-08 05:29:28 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70B3BA94-676C-3639-B635-FE5D09F8481A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

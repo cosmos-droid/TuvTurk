@@ -10,6 +10,7 @@ public class TuvTurkDatabaseContext : DbContext
     public DbSet<City> Cities { get; set; }
     public DbSet<Customer> Customers { get; set; }
     public DbSet<Station> Stations { get; set; }
+    public DbSet<Vehicle> Vehicles {get; set;}
     public DbSet<EnumGroup> EnumGroups { get; set; }
     public DbSet<EnumGroupType> EnumGroupsTypes { get; set; }
 

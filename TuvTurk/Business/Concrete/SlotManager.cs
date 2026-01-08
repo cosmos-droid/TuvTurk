@@ -57,6 +57,24 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
+
+
+        public IResult GetAndUpdateSlot(long appointmentId, long stationId, DateOnly availableDate, long appointmentSlot)
+        {
+            try
+            {
+                Slots tempSlot =_slotDal.Get(q => q.StationId == stationId && q.AvailableDate == availableDate && q.AppointmentSlot == appointmentSlot);
+                tempSlot.AppointmentId = appointmentId;
+                UpdateSlot(tempSlot);
+                return new SuccessResult(message: Messages.SlotUpdated);
+            }
+            catch (Exception ex)
+            {
+
+                return new ErrorResult(message: ex.Message);
+            }            
+        }
+
         public IDataResult<IList<Slots>> GetAllSlots()
         {
             try
@@ -95,11 +113,14 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
-        public IDataResult<IList<Slots>> GetEmptySlotsByDate(DateOnly availableDate,long stationId)
+        public IDataResult<IList<Slots>> GetEmptySlotsByDate(DateOnly availableDateStart,DateOnly availableDateEnd,long stationId)
         {
             try
             {
-                return new SuccessDataResult<IList<Slots>>(_slotDal.GetAll(q => q.AvaibleDate == availableDate && q.AppointmentId == null && q.StationId == stationId));
+                return new SuccessDataResult<IList<Slots>>(_slotDal.GetAll(q => q.AvailableDate >= availableDateStart && 
+                q.AvailableDate <= availableDateEnd && 
+                q.AppointmentId == null &&
+                q.StationId == stationId));
             }
             catch (Exception ex)
             {

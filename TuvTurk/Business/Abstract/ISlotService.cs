@@ -10,7 +10,9 @@ namespace TuvTurk.Business.Abstract
         IDataResult<IList<Slots>> GetAllSlots();
         IDataResult<IList<Slots>> GetEmptySlots(long stationId);
 
-        IDataResult<IList<Slots>> GetEmptySlotsByDate(DateOnly availableDate, long stationId);
+        IDataResult<IList<Slots>> GetEmptySlotsByDate(DateOnly availableDateStart, DateOnly availableDateEnd, long stationId);
+
+        IResult GetAndUpdateSlot(long appointmentId,long stationId, DateOnly availableDate, long AppointmentSlot);
 
 
         IResult AddSlot(Slots slot);
