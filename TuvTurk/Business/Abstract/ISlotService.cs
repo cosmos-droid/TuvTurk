@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore.Storage;
 using TuvTurk.Entities.Concrete;
 using TuvTurk.Entities.Utilities;
 using IResult = TuvTurk.Entities.Utilities.IResult;
@@ -11,6 +12,8 @@ namespace TuvTurk.Business.Abstract
         IDataResult<IList<Slots>> GetEmptySlots(long stationId);
 
         IDataResult<IList<Slots>> GetEmptySlotsByDate(DateOnly availableDateStart, DateOnly availableDateEnd, long stationId);
+
+        IDataResult<float> CalculateOccupancy(DateOnly availableDateStart, DateOnly availableDateEnd, long stationId);
 
         IResult GetAndUpdateSlot(long appointmentId,long stationId, DateOnly availableDate, long AppointmentSlot);
 

@@ -8,6 +8,6 @@ namespace TuvTurk.Entities.Core
         public DateTime CreatedDate { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime? UpdatedDate { get; set; }
-
+        
     }
 }

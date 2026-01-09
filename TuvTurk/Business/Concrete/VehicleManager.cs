@@ -85,7 +85,7 @@ namespace TuvTurk.Business.Concrete
             }
             
         }
-
+    
         public IDataResult<bool> DoesPlateExist(string plateNo)
         {
             plateNo = RemoveSpace(plateNo);

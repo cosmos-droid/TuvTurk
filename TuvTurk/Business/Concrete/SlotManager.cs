@@ -128,8 +128,25 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
+        public IDataResult<float> CalculateOccupancy(DateOnly availableDateStart, DateOnly availableDateEnd, long stationId)
+        {
+            try
+            {
+                float nonOccupiedSlots = GetEmptySlotsByDate(availableDateStart, availableDateEnd, stationId).Data.Count;
+                float occupiedSlots = _slotDal.GetAll(q => q.AvailableDate >= availableDateStart && q.AvailableDate <= availableDateEnd && q.AppointmentId != null).Count;
+
+                
+
+                float occupationRate = occupiedSlots * (100/(nonOccupiedSlots + occupiedSlots))  / ((nonOccupiedSlots + occupiedSlots)*(100/(nonOccupiedSlots + occupiedSlots)));
 
 
-
+                return new SuccessDataResult<float>(occupationRate * 100);
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<float>(message: ex.Message);
+            }
+           
+        }
     }
 }

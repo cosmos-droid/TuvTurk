@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TuvTurk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e940c82e9adfbd5d78ffb18faf6fab6e7e19cca0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4434c7b68e71d99a8bc0c1194748737f92db7423")]
 [assembly: System.Reflection.AssemblyProductAttribute("TuvTurk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TuvTurk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

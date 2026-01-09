@@ -79,8 +79,6 @@ namespace TuvTurk.Controllers
 
 
 
-
-
         [HttpGet(template: "getall")]
         public IActionResult GetAll()
         {
@@ -122,6 +120,24 @@ namespace TuvTurk.Controllers
             return BadRequest(result.Message);
         }
 
+        [HttpGet(template: "getslotoccupancy")]
+        public IActionResult CalculateOccupancy(    
+            [FromQuery] string availableDateStart,
+            [FromQuery] string availableDateEnd,
+            [FromQuery] long stationId)
+        {
+
+            var start = DateOnly.Parse(availableDateStart);
+            var end = DateOnly.Parse(availableDateEnd);
+
+
+            var result = _slotsService.CalculateOccupancy(start,end, stationId);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result.Message);
+        }
 
 
 
