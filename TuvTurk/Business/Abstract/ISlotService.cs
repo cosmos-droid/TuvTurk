@@ -13,9 +13,9 @@ namespace TuvTurk.Business.Abstract
 
         IDataResult<IList<Slots>> GetEmptySlotsByDate(DateOnly availableDateStart, DateOnly availableDateEnd, long stationId);
 
-        IDataResult<float> CalculateOccupancy(DateOnly availableDateStart, DateOnly availableDateEnd, long stationId);
+        IDataResult<IList<KeyValuePair<string, float>>> CalculateOccupancy(long stationId);
 
-        IResult GetAndUpdateSlot(long appointmentId,long stationId, DateOnly availableDate, long AppointmentSlot);
+        IResult GetAndUpdateSlot(long appointmentId, long stationId, DateOnly availableDate, long AppointmentSlot);
 
 
         IResult AddSlot(Slots slot);

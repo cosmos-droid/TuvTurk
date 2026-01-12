@@ -63,7 +63,7 @@ namespace TuvTurk.Business.Concrete
         {
             try
             {
-                Slots tempSlot =_slotDal.Get(q => q.StationId == stationId && q.AvailableDate == availableDate && q.AppointmentSlot == appointmentSlot);
+                Slots tempSlot = _slotDal.Get(q => q.StationId == stationId && q.AvailableDate == availableDate && q.AppointmentSlot == appointmentSlot);
                 tempSlot.AppointmentId = appointmentId;
                 UpdateSlot(tempSlot);
                 return new SuccessResult(message: Messages.SlotUpdated);
@@ -72,7 +72,7 @@ namespace TuvTurk.Business.Concrete
             {
 
                 return new ErrorResult(message: ex.Message);
-            }            
+            }
         }
 
         public IDataResult<IList<Slots>> GetAllSlots()
@@ -113,12 +113,12 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
-        public IDataResult<IList<Slots>> GetEmptySlotsByDate(DateOnly availableDateStart,DateOnly availableDateEnd,long stationId)
+        public IDataResult<IList<Slots>> GetEmptySlotsByDate(DateOnly availableDateStart, DateOnly availableDateEnd, long stationId)
         {
             try
             {
-                return new SuccessDataResult<IList<Slots>>(_slotDal.GetAll(q => q.AvailableDate >= availableDateStart && 
-                q.AvailableDate <= availableDateEnd && 
+                return new SuccessDataResult<IList<Slots>>(_slotDal.GetAll(q => q.AvailableDate >= availableDateStart &&
+                q.AvailableDate <= availableDateEnd &&
                 q.AppointmentId == null &&
                 q.StationId == stationId));
             }
@@ -128,25 +128,41 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
-        public IDataResult<float> CalculateOccupancy(DateOnly availableDateStart, DateOnly availableDateEnd, long stationId)
+        public IDataResult<IList<KeyValuePair<string, float>>> CalculateOccupancy(long stationId)
         {
             try
             {
-                float nonOccupiedSlots = GetEmptySlotsByDate(availableDateStart, availableDateEnd, stationId).Data.Count;
-                float occupiedSlots = _slotDal.GetAll(q => q.AvailableDate >= availableDateStart && q.AvailableDate <= availableDateEnd && q.AppointmentId != null).Count;
+                IList<KeyValuePair<string, float>> DateOccupancyRates = new List<KeyValuePair<string, float>>();
+                string minDate = _slotDal.GetAll(q => q.StationId == stationId).Min(s => s.AvailableDate).ToString();
+                string maxDate = _slotDal.GetAll(q => q.StationId == stationId).Max(s => s.AvailableDate).ToString();
 
-                
+                IList<string> dateList = _slotDal.GetAll(q => q.StationId == stationId && q.AvailableDate >= DateOnly.Parse(minDate) && q.AvailableDate <= DateOnly.Parse(maxDate))
+                    .Select(s => s.AvailableDate.ToString()).Distinct().ToList();
 
-                float occupationRate = occupiedSlots * (100/(nonOccupiedSlots + occupiedSlots))  / ((nonOccupiedSlots + occupiedSlots)*(100/(nonOccupiedSlots + occupiedSlots)));
+
+                foreach (string date in dateList)
+                {
+                    float nonOccupiedSlots = GetEmptySlotsByDate(DateOnly.Parse(date), DateOnly.Parse(date), stationId).Data.Count;
+                    float occupiedSlots = _slotDal.GetAll(q => q.StationId == stationId && q.AvailableDate == DateOnly.Parse(date) && q.AppointmentId != null).Count;
+                    float occupationRate = occupiedSlots * (100 / (nonOccupiedSlots + occupiedSlots)) / ((nonOccupiedSlots + occupiedSlots) * (100 / (nonOccupiedSlots + occupiedSlots)));
+                    DateOccupancyRates.Add(new KeyValuePair<string, float>(date, occupationRate * 100));
+                }
+
+                // float nonOccupiedSlots = GetEmptySlotsByDate(availableDateStart, availableDateEnd, stationId).Data.Count;
+                // float occupiedSlots = _slotDal.GetAll(q => q.AvailableDate >= availableDateStart && q.AvailableDate <= availableDateEnd && q.AppointmentId != null).Count;
 
 
-                return new SuccessDataResult<float>(occupationRate * 100);
+
+                // float occupationRate = occupiedSlots * (100 / (nonOccupiedSlots + occupiedSlots)) / ((nonOccupiedSlots + occupiedSlots) * (100 / (nonOccupiedSlots + occupiedSlots)));
+
+
+                return new SuccessDataResult<IList<KeyValuePair<string, float>>>(DateOccupancyRates);
             }
             catch (Exception ex)
             {
-                return new ErrorDataResult<float>(message: ex.Message);
+                return new ErrorDataResult<IList<KeyValuePair<string, float>>>(message: ex.Message);
             }
-           
+
         }
     }
 }

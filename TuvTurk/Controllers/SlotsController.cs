@@ -62,12 +62,12 @@ namespace TuvTurk.Controllers
 
 
         [HttpPost(template: "getandupdateslot")]
-        public IActionResult GetAndUpdateSlot(long appointmentId, long stationId, string availableDate, long appointmentSlot )
+        public IActionResult GetAndUpdateSlot(long appointmentId, long stationId, string availableDate, long appointmentSlot)
         {
 
             var date = DateOnly.Parse(availableDate);
 
-            var result = _slotsService.GetAndUpdateSlot(appointmentId, stationId, date, appointmentSlot);            
+            var result = _slotsService.GetAndUpdateSlot(appointmentId, stationId, date, appointmentSlot);
             if (result.Success)
             {
                 return Ok(result.Message);
@@ -102,7 +102,7 @@ namespace TuvTurk.Controllers
         }
 
         [HttpGet(template: "getallemptyslotsbydate")]
-        public IActionResult GetAllEmptySlotsByDate(    
+        public IActionResult GetAllEmptySlotsByDate(
             [FromQuery] string availableDateStart,
             [FromQuery] string availableDateEnd,
             [FromQuery] long stationId)
@@ -112,7 +112,7 @@ namespace TuvTurk.Controllers
             var end = DateOnly.Parse(availableDateEnd);
 
 
-            var result = _slotsService.GetEmptySlotsByDate(start,end, stationId);
+            var result = _slotsService.GetEmptySlotsByDate(start, end, stationId);
             if (result.Success)
             {
                 return Ok(result.Data);
@@ -121,17 +121,10 @@ namespace TuvTurk.Controllers
         }
 
         [HttpGet(template: "getslotoccupancy")]
-        public IActionResult CalculateOccupancy(    
-            [FromQuery] string availableDateStart,
-            [FromQuery] string availableDateEnd,
+        public IActionResult CalculateOccupancy(
             [FromQuery] long stationId)
         {
-
-            var start = DateOnly.Parse(availableDateStart);
-            var end = DateOnly.Parse(availableDateEnd);
-
-
-            var result = _slotsService.CalculateOccupancy(start,end, stationId);
+            var result = _slotsService.CalculateOccupancy(stationId);
             if (result.Success)
             {
                 return Ok(result.Data);
