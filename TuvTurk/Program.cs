@@ -6,6 +6,7 @@ using TuvTurk.Business.Concrete;
 using TuvTurk.DataAccess.Abstract;
 using TuvTurk.DataAccess.Concrete.EntityFramework.Concrete;
 using TuvTurk.Entities.Concrete;
+using TuvTUrk.Business.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +38,9 @@ builder.Services.AddScoped<IEnumGroupTypeService, EnumGroupTypeManager>();
 
 builder.Services.AddScoped<IVehicleDal, EfVehicleRepository>();
 builder.Services.AddScoped<IvehicleService, VehicleManager>();
+
+builder.Services.AddScoped<IPriceDal, EfPricesRepository>();
+builder.Services.AddScoped<IPriceService, PriceManager>();
 //end Services and Dals
 
 

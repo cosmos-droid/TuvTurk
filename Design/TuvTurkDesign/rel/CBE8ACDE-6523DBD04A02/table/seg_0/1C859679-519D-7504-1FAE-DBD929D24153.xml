@@ -33,7 +33,7 @@
 <colAssociation fkAssociation="279C8888-F2C8-D2FB-60D1-1A429F404FCD" referredColumn="3AD18FB9-DEDB-C4F4-33E4-1E143A4DD250"/>
 </associations>
 </Column>
-<Column name="Price" id="2310F5A7-D5F7-FA94-DE8F-1630C5AF53DF">
+<Column name="ServicePrice" id="2310F5A7-D5F7-FA94-DE8F-1630C5AF53DF">
 <createdBy>kutay</createdBy>
 <createdTime>2026-01-09 20:02:24 UTC</createdTime>
 <ownerDesignName>TuvTurkDesign</ownerDesignName>
@@ -77,6 +77,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="01E5DECF-FE53-FCDF-42C1-6610FCF3AB8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B5ED37E8-75F7-9C16-9BB0-5FA087548294" name="Prices_EnumGroupTypeId_UQ">
+<createdBy>cosmos</createdBy>
+<createdTime>2026-01-12 08:13:12 UTC</createdTime>
+<ownerDesignName>TuvTurkDesign</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0445EFA7-0DE2-C7D9-FFA5-C4EF9C6B81A6"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="23755EA2-7663-0CC7-DEEA-F75B5B1FA494" name="Prices_EnumGroupsTypes_FK">

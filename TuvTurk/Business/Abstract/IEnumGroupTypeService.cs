@@ -1,4 +1,3 @@
-
 using TuvTurk.Entities.Concrete;
 using TuvTurk.Entities.Utilities;
 using IResult = TuvTurk.Entities.Utilities.IResult;

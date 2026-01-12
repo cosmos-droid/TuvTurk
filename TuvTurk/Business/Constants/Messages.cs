@@ -50,6 +50,10 @@ namespace TuvTurk.Business.Constants
         public static string VehicleUpdated = "Vehicle deleted succesfully.";
         public static string VehicleNotFound = "Vehicle not found.";
 
+        public static string PriceAdded = "Price added successfully.";
+        public static string PriceDeleted = "Price deleted successfully.";
+        public static string PriceUpdated = "Price updated successfully.";
+        public static string PriceNotFound = "Price not found.";
 
     }
 }
