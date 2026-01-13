@@ -8,7 +8,7 @@ namespace TuvTurk.Entities.Concrete
     {
         public long PriceId { get; set; }
         public long EnumGroupTypeId { get; set; }
-        public float ServicePrice { get; set; }
+        public double ServicePrice { get; set; }
 
         [ForeignKey("EnumGroupTypeId")]
         public EnumGroupType? EnumGroupType { get; set; }

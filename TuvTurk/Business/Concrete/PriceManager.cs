@@ -53,6 +53,23 @@ namespace TuvTUrk.Business.Concrete
             }
         }
 
+        public IDataResult<double> GetTotalPrice(long vehicleTypeId, long inspectionTypeId)
+        {
+            try
+            {
+                double vehiclePrice = GetPriceByEnumGroupTypeId(vehicleTypeId).Data.ServicePrice;
+                double inspectionPrice = GetPriceByEnumGroupTypeId(inspectionTypeId).Data.ServicePrice;
+                double totalPrice = vehiclePrice + inspectionPrice;
+                return new SuccessDataResult<double>(totalPrice);
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<double>(message: ex.Message);
+            }
+
+
+        }
+
 
         public IResult AddPrice(Price price)
         {
@@ -94,5 +111,7 @@ namespace TuvTUrk.Business.Concrete
                 return new ErrorResult(message: ex.Message);
             }
         }
+
+
     }
 }

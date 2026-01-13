@@ -37,6 +37,17 @@ namespace TuvTurk.Controllers
             return BadRequest(result);
         }
 
+        [HttpGet("gettotalprice")]
+        public IActionResult GetTotalPrice(long vehicleTypeId, long inspectionTypeId)
+        {
+            var result = _priceService.GetTotalPrice(vehicleTypeId, inspectionTypeId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
         [HttpPost("add")]
         public IActionResult Add(Price price)
         {

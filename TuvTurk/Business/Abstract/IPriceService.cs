@@ -10,6 +10,8 @@ namespace TuvTurk.Business.Abstract
         IDataResult<IList<Price>> GetAllPrices();
         IDataResult<Price> GetPriceByEnumGroupTypeId(long enumGroupTypeId);
 
+        IDataResult<double> GetTotalPrice(long vehicleTypeId, long inspectionTypeId);
+
         IResult AddPrice(Price price);
         IResult UpdatePrice(Price price);
         IResult DeletePrice(Price price);
