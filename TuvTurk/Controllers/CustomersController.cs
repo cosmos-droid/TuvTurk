@@ -29,6 +29,18 @@ namespace TuvTurk.Controllers
             return BadRequest(result.Message);
         }
 
+
+        [HttpGet("getcustomerbyreservationno")]
+        public IActionResult GetCustomerByReservationNo(string reservationNo)
+        {
+            var result = _customerService.GetCustomerByReservationNo(reservationNo);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result.Message);
+        }        
+
         [HttpPost(template: "add")]
         public IActionResult Add(Customer customer)
         {

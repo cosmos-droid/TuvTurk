@@ -72,6 +72,18 @@ namespace TuvTurk.Business.Concrete
             }
         }
 
+        public IDataResult<Customer> GetCustomerByReservationNo(string reservationNo)
+        {
+            try
+            {
+                return new SuccessDataResult<Customer>(_customerDal.Get(c => c.ReservationNo == reservationNo));
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<Customer>(message: ex.Message);
+            }  
+        }
+
         public IResult UpdateCustomer(Customer customer)
         {
             try

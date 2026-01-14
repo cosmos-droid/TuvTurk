@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using TuvTurk.Business.Abstract;
 using TuvTurk.Business.Constants;
 using TuvTurk.DataAccess.Abstract;
@@ -10,10 +11,12 @@ namespace TuvTurk.Business.Concrete
     public class CityManager : ICityService
     {
         private readonly ICityDal _cityDal;
+        private readonly IStationDal _stationDal;
 
-        public CityManager(ICityDal cityDal)
+        public CityManager(ICityDal cityDal, IStationDal stationDal)
         {
             _cityDal = cityDal;
+            _stationDal = stationDal;
         }
 
         public IResult AddCity(City city)
@@ -53,6 +56,30 @@ namespace TuvTurk.Business.Concrete
             {
                 return new ErrorDataResult<IList<City>>(message: ex.Message);
             }
+            
+        }
+
+        public IDataResult<IList<City>> GetAllCitiesWithStaion()
+        {
+            try
+            {
+                List<long> cityIds = _stationDal.GetAll().Select(q => q.CityId).Distinct().ToList();
+                IList<City> cities = new List<City>();
+                
+                foreach(long cityId in cityIds)
+                {
+                    City city = GetCityById(cityId).Data;    
+                    cities.Add(city);
+
+                }
+
+                return new SuccessDataResult<IList<City>>(cities);
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<IList<City>>(message: ex.Message);
+            }            
+
         }
 
         public IDataResult<City> GetCityById(long CityId)

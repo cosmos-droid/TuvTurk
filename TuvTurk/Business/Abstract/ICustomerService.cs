@@ -9,6 +9,8 @@ namespace TuvTurk.Business.Abstract
     {
         IDataResult<Customer> GetCustomerById(long CustomerId);
         IDataResult<IList<Customer>> GetAllCustomers();
+        IDataResult<Customer> GetCustomerByReservationNo(string reservationNo);
+
 
         IResult AddCustomer(Customer customer);
         IResult UpdateCustomer(Customer customer);

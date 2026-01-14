@@ -60,6 +60,7 @@ namespace TuvTurk.Controllers
             }
             return BadRequest(result.Message);
         }
+
         [HttpGet(template: "getall")]
         public IActionResult GetAll()
         {
@@ -70,6 +71,18 @@ namespace TuvTurk.Controllers
             }
             return BadRequest(result.Message);
         }
+
+        [HttpGet(template: "getallcitieswithstation")]
+        public IActionResult GetAllCitiesWithStation()
+        {
+            var result = _cityService.GetAllCitiesWithStaion();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result.Message);
+        }
+
 
     }
 }

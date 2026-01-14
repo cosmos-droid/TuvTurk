@@ -133,8 +133,8 @@ namespace TuvTurk.Business.Concrete
             try
             {
                 IList<KeyValuePair<string, float>> DateOccupancyRates = new List<KeyValuePair<string, float>>();
-                string minDate = _slotDal.GetAll(q => q.StationId == stationId).Min(s => s.AvailableDate).ToString();
-                string maxDate = _slotDal.GetAll(q => q.StationId == stationId).Max(s => s.AvailableDate).ToString();
+                string minDate = _slotDal.GetAll(q => q.StationId == stationId).Min(s => s.AvailableDate).ToString().Replace("/",".");
+                string maxDate = _slotDal.GetAll(q => q.StationId == stationId).Max(s => s.AvailableDate).ToString().Replace("/",".");
 
                 IList<string> dateList = _slotDal.GetAll(q => q.StationId == stationId && q.AvailableDate >= DateOnly.Parse(minDate) && q.AvailableDate <= DateOnly.Parse(maxDate))
                     .Select(s => s.AvailableDate.ToString()).Distinct().ToList();
@@ -144,8 +144,11 @@ namespace TuvTurk.Business.Concrete
                 {
                     float nonOccupiedSlots = GetEmptySlotsByDate(DateOnly.Parse(date), DateOnly.Parse(date), stationId).Data.Count;
                     float occupiedSlots = _slotDal.GetAll(q => q.StationId == stationId && q.AvailableDate == DateOnly.Parse(date) && q.AppointmentId != null).Count;
-                    float occupationRate = occupiedSlots * (100 / (nonOccupiedSlots + occupiedSlots)) / ((nonOccupiedSlots + occupiedSlots) * (100 / (nonOccupiedSlots + occupiedSlots)));
-                    DateOccupancyRates.Add(new KeyValuePair<string, float>(date, occupationRate * 100));
+                    
+
+                    float occupationRate = occupiedSlots * (100 / (nonOccupiedSlots + occupiedSlots)) / ((nonOccupiedSlots + occupiedSlots) * (100 / (nonOccupiedSlots + occupiedSlots)));                        
+              
+                    DateOccupancyRates.Add(new KeyValuePair<string, float>(DateOnly.Parse(date).ToString("dd.MM.yyyy"), occupationRate * 100));
                 }
 
                 // float nonOccupiedSlots = GetEmptySlotsByDate(availableDateStart, availableDateEnd, stationId).Data.Count;

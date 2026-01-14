@@ -10,9 +10,10 @@ namespace TuvTurk.Entities.Concrete
         [Key]
         public long CustomerId { get; set; }
         public string CustomerName { get; set; }
-        public string CustomerSurname { get; set; }
+        public string CustomerLastName { get; set; }
         public string CustomerPhoneNumber { get; set; }
-        public string? CustomerEmail { get; set; }
+        public string? CustomerEMail { get; set; }
+        public string? ReservationNo { get; set; }
 
 
     }

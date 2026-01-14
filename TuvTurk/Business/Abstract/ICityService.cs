@@ -8,6 +8,7 @@ namespace TuvTurk.Business.Abstract
     {
         IDataResult<City> GetCityById(long CityId);
         IDataResult<IList<City>> GetAllCities();
+        IDataResult<IList<City>> GetAllCitiesWithStaion();
 
         IResult AddCity(City city);
         IResult UpdateCity(City city);
