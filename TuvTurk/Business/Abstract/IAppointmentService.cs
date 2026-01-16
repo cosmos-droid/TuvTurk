@@ -12,6 +12,7 @@ namespace TuvTurk.Business.Abstract
         IDataResult<Appointments> GetAppointmentByReservationNo(string reservationno);
       
         IDataResult<IList<Appointments>> GetAllAppointments();
+        IDataResult<AppointmentFieldDTO> GetAppointmentField(long appointmentId);
 
         IResult AddAppointment(Appointments appointment);
         IResult UpdateAppointment(Appointments appointment);

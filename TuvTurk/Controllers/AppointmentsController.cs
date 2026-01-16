@@ -27,6 +27,16 @@ namespace TuvTurk.Controllers
             return BadRequest(result.Message);
         }
 
+        [HttpGet(template: "getappointmentsummary")]
+        public IActionResult GetAppointmentSummary(long id)
+        {
+            var result = _appointmentService.GetAppointmentField(id);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+            return BadRequest(result.Message);
+        }
 
         [HttpGet(template: "getappointmentbyreservationno")]
         public IActionResult GetAppointmentByReservationNo(string reservationNo)
